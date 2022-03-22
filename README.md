@@ -61,6 +61,15 @@ Models [can have](https://sequelize.org/master/manual/getters-setters-virtuals.h
 - combine custom getter & setter for custom serialized value (e.g. compression .. not typically necessary)
 - virtual fields that are not actually in the database (e.g. calculated full name field) with `DataType.VIRTUAL`
 
+## Migrations ([ref](https://sequelize.org/master/manual/migrations.html))
+Need `sequelize-cli`  
+`init` to create folders and `config.json`, scaffold  
+`model:generate` to add a table  
+`db:migrate` to modify schema (and update `SequelizeMeta` table)  
+`db:migrate:undo` to revert most recent change  
+`db:migrate:undo:all` for full reset, or `--to XXX..-create-XXX.js`  
+
+
 
 ## Transactions
 TODO: https://sequelize.org/master/manual/transactions.html
