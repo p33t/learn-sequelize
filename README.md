@@ -69,6 +69,10 @@ Need `sequelize-cli`
 `db:migrate:undo` to revert most recent change  
 `db:migrate:undo:all` for full reset, or `--to XXX..-create-XXX.js`  
 
+Looks like migrations are not as automated as Entity Framework (of .NET Core). E.g. Migration scripts (up & down) appear
+to be generated in basic form and then customized by hand (?).
+
+Have created UserRole table with command: `sequelize model:generate --name UserRole --attributes 'userId:integer,roleId:integer'`
 
 
 ## Transactions
