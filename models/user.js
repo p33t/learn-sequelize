@@ -11,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      // will create UserRole model with unique constraint on id fields
+      models.Role.belongsToMany(User, {through: 'UserRole', as: 'roles'}); 
     }
   }
   User.init({
