@@ -73,6 +73,8 @@ Looks like migrations are not as automated as Entity Framework (of .NET Core). E
 to be generated in basic form and then customized by hand (?).
 
 Have created UserRole table with command: `sequelize model:generate --name UserRole --attributes 'userId:integer,roleId:integer'`
+- Model is disconnected from migration. So can customize them independently, which doesn't sound appealing but might be necessary.
+- Will leave migrations at this point. Target code base uses `sequelize.sync({alter: true})` which seems to be an alternative to explicit migration
 
 
 ## Transactions

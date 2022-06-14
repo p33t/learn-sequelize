@@ -11,6 +11,8 @@ describe("Initialization tests", () => {
         expect(sequelize.models.ShouldNotExist).not.toBeDefined();
         expect(sequelize.models.User).toBeDefined();
         
+        // NOTE: This isn't a great way to go. The defaults for association tables are likely not exactly what we want.
+        //       Really want to define constraints etc. explicitly in one place.
         expect(sequelize.models.UserRole).toBeDefined();
     });
 });
